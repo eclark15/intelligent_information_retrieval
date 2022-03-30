@@ -2,7 +2,7 @@
 
 **Project description:** 
 
-In this IR project, I created a search engine retrieval system from scratch that crawls the web pages in the domain https://www.bosch.us and returns the top 7 most relevant web pages based on the user’s search query. The base implementation includes a VSM (vector-space model) using TF-IDF with Cosine similarity which is used for matching queries and indexed documents. In addition, the system includes the primary elements of a document retrieval system such as a web crawler, indexer, and query processing components. 
+In this IR project, I created a search engine retrieval system from scratch that crawls the web pages in the domain https://www.bosch.us and returns the top 7 most relevant web pages based on the user’s search query. The base implementation includes a **VSM (vector-space model) using TF-IDF with Cosine similarity** which is used for matching queries and indexed documents. In addition, the system includes the primary elements of a document retrieval system such as a web crawler, indexer, and query processing components. 
 
 The search retrieval system consists of two python files, one that contains the index of the website ([final_index.py](https://github.com/eclark15/intelligent_information_retrieval/blob/c6f9a69339e48d05afc0749053f34ca27af04d95/python_files/final_index.py)) and the second file which retrieves the user’s search query and returns the relevant web pages ([queryRetrieve.py](https://github.com/eclark15/intelligent_information_retrieval/blob/c6f9a69339e48d05afc0749053f34ca27af04d95/python_files/queryRetrieve.py)). Feel free to refer to the [README.txt](https://github.com/eclark15/intelligent_information_retrieval/blob/c509d128820c353551ca44f0741f26c7edd1a641/python_files/README.txt) file for further details. 
 
@@ -81,6 +81,8 @@ def getCosineSimiliarty(postingsDictQueryDFClean, queryList):   #computing cosin
 ```
 ## 3. Tests and Results
 ### 3a. Query #1 'internships in marketing or design'
+In the table, the top 7 pages that the system calculated as being the most relevant based on the user’s search query. However, we can see that only Search Result Number 1,2,3 and 6 are actually relevant while search result numbers 4, 5, and 7 are not relevant. 
+
 <img width="633" alt="queryTest_internships" src="https://user-images.githubusercontent.com/50348032/160932829-75c72d00-7fdb-4b78-a462-0c25a1e66dc2.png">
 
 ### 3b. Query #2 'environmental sustainability responsibility'
