@@ -1,6 +1,6 @@
 ## This can be your internal website page / project page
 
-**Project description:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+**Project description:** I created a search engine retrieval system from scratch that crawls the web pages in the domain https://www.bosch.us and returns the top 7 most relevant web pages based on the user’s search query. The search retrieval system consists of two python files, one that contains the index of the website (called final_index.py) and the other file that retrieves the users search query and returns the relevant web pages (called queryRetrieve.py). 
 
 ### 1. Suggest hypotheses about the causes of observed phenomena
 
