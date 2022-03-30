@@ -2,7 +2,7 @@
 
 **Project description:** 
 
-In this IR project, I created a search engine retrieval system from scratch that crawls the web pages in the domain https://www.bosch.us and returns the top 7 most relevant web pages based on the user’s search query. My implementation includes the primary elements of a document retrieval system such as a web crawler, indexer, and query processing components. 
+In this IR project, I created a search engine retrieval system from scratch that crawls the web pages in the domain https://www.bosch.us and returns the top 7 most relevant web pages based on the user’s search query. The base implementation includes a VSM (vector-space model) using TF-IDF with Cosine similarity which is used for matching queries and indexed documents. In addition, the system includes the primary elements of a document retrieval system such as a web crawler, indexer, and query processing components. 
 
 The search retrieval system consists of two python files, one that contains the index of the website ([final_index.py](https://github.com/eclark15/intelligent_information_retrieval/blob/c6f9a69339e48d05afc0749053f34ca27af04d95/python_files/final_index.py)) and the second file which retrieves the user’s search query and returns the relevant web pages ([queryRetrieve.py](https://github.com/eclark15/intelligent_information_retrieval/blob/c6f9a69339e48d05afc0749053f34ca27af04d95/python_files/queryRetrieve.py)). Feel free to refer to the [README.txt](https://github.com/eclark15/intelligent_information_retrieval/blob/c509d128820c353551ca44f0741f26c7edd1a641/python_files/README.txt) file for further details. 
 
@@ -64,9 +64,27 @@ The IDF value is then stored into our `postingsDict`. An example of one instance
 `'scale': {8123: 8.98370619265935, 3692: 4.491853096329675, 'DocFreq': 2, 'IDF': 4.491853096329675} `
 
 ## 2. Query Interface 
-### 2a. 
+Now that the index has been generated and saved, we are able to move into the queryRetrieve.py file. queryRetrieve.py imports the dictionary indexes and is used to return the most relevant documents associated with a user’s search query. 
 
+### 2a. Calculating the Cosine Similarity
+A query is processed based on its relevant terms and evaluated on its associated TF-IDF values using the previously generated index dictionaries. Next, I converted the relevant query words and TF-IDF values into a DataFrame to manually calculate the cosine similarity using numpy for every web page. 
 
+```python
+def getCosineSimiliarty(postingsDictQueryDFClean, queryList):   #computing cosine similarity between our query and all website pages
+    import numpy as np
+    from numpy.linalg import norm
+    
+    def cosine_similarity(QueryVect, DocVect):                  #returns cosine similarity when 2 lists are entered 
+        cosine = np.dot(QueryVect,DocVect)/(norm(QueryVect) * norm(DocVect))
+        return cosine
+
+```
+## 3. Tests and Results
+### 3a. Query #1 'internships in marketing or design'
+<img width="633" alt="queryTest_internships" src="https://user-images.githubusercontent.com/50348032/160932829-75c72d00-7fdb-4b78-a462-0c25a1e66dc2.png">
+
+### 3b. Query #2 'environmental sustainability responsibility'
+<img width="626" alt="queryTest_sustainability" src="https://user-images.githubusercontent.com/50348032/160932842-6a392452-855b-4663-9534-fd0ff035688e.png">
 
 ## 3. Further Improvements and Enhancements
 
