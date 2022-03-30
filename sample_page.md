@@ -4,8 +4,10 @@
 
 In this IR project, I created a search engine retrieval system from scratch that crawls the web pages in the domain https://www.bosch.us and returns the top 7 most relevant web pages based on the user’s search query. My implementation includes the primary elements of a document retrieval system such as a web crawler, indexer, and query processing components. 
 
-The search retrieval system consists of two python files, one that contains the index of the website (final_index.py) and the second file which retrieves the user’s search query and returns the relevant web pages (queryRetrieve.py).  
+The search retrieval system consists of two python files, one that contains the index of the website ([final_index.py](https://github.com/eclark15/intelligent_information_retrieval/blob/c6f9a69339e48d05afc0749053f34ca27af04d95/python_files/final_index.py)) and the second file which retrieves the user’s search query and returns the relevant web pages ([queryRetrieve.py](https://github.com/eclark15/intelligent_information_retrieval/blob/c6f9a69339e48d05afc0749053f34ca27af04d95/python_files/queryRetrieve.py)).  
 
+
+![gif](https://user-images.githubusercontent.com/50348032/160918448-38bbac51-cba0-4f9c-b353-c022873711f3.gif)
 
 ### 1. Creating a website index 
 
