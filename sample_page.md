@@ -1,10 +1,15 @@
 ## Search Engine Retrieval System 
 
-**Project description:** I created a search engine retrieval system from scratch that crawls the web pages in the domain https://www.bosch.us and returns the top 7 most relevant web pages based on the user’s search query. The search retrieval system consists of two python files, one that contains the index of the website (called final_index.py) and the other file that retrieves the users search query and returns the relevant web pages (called queryRetrieve.py). 
+**Project description:** 
 
-### 1. Suggest hypotheses about the causes of observed phenomena
+In this IR project, I created a search engine retrieval system from scratch that crawls the web pages in the domain https://www.bosch.us and returns the top 7 most relevant web pages based on the user’s search query. My implementation includes the primary elements of a document retrieval system such as a web crawler, indexer, and query processing components. 
 
-My implementation included the basic components including separate crawler, indexer, and query processing components
+The search retrieval system consists of two python files, one that contains the index of the website (final_index.py) and the second file which retrieves the user’s search query and returns the relevant web pages (queryRetrieve.py).  
+
+
+### 1. Creating a website index 
+
+First, in final_index.py I gathered a list of the website’s URLs. The system crawls all of the website pages recursively using a crawl() function and gathers the web page links using the Beautiful Soup class while simultaneously cleaning the URLs and removing unwanted pages such as PDFs. 
 
 ```javascript
 if (isAwesome){
