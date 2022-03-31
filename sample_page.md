@@ -64,7 +64,7 @@ The IDF value is then stored into our `postingsDict`. An example of one instance
 `'scale': {8123: 8.98370619265935, 3692: 4.491853096329675, 'DocFreq': 2, 'IDF': 4.491853096329675} `
 
 ## 2. Query Interface 
-Now that the index has been generated and saved, we are able to move into the queryRetrieve.py file. queryRetrieve.py imports the dictionary indexes and is used to return the most relevant documents associated with a user’s search query. 
+Now that the index has been generated and saved, we are able to move into the queryRetrieve.py file. queryRetrieve.py imports the dictionary indexes and is used to return the most relevant web pages associated with a user’s search query. 
 
 ### 2a. Calculating the Cosine Similarity
 A query is processed based on its relevant terms and evaluated on its associated TF-IDF values using the previously generated index dictionaries. Next, I converted the relevant query words and TF-IDF values into a DataFrame to manually calculate the cosine similarity using numpy for every web page. 
